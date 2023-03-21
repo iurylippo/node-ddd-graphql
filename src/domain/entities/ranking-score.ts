@@ -13,5 +13,3 @@ type Hero = {
   name: string;
   level: number;
 }
-
-const t = ''
