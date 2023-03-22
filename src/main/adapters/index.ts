@@ -1,1 +1,2 @@
-export * from './fastify-routes'
+export * from './fastify-route'
+export * from './adapter-route'
