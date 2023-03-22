@@ -1,11 +1,17 @@
 import { setupRoutes } from '@/main/config/routes'
 
 import Fastify from 'fastify'
+import { setupApolloServer } from './apollo-server'
 
 const app = Fastify({
   logger: true
 })
 
-setupRoutes(app)
+const bootstrap = async () => {
+  await setupApolloServer(app)
+  await setupRoutes(app)
 
-export default app
+  return app
+}
+
+export default bootstrap
